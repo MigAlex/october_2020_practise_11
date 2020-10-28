@@ -51,10 +51,10 @@ class _EditScreenState extends State<EditScreen> {
             content: Text('Do you want to leave without saving?'),
             actions: [
               FlatButton(
-                  onPressed: () => Navigator.pop(context, false),
+                  onPressed: () => Navigator.of(context).pop(false),
                   child: Text('Nope')),
               FlatButton(
-                  onPressed: () => Navigator.pop(context, false),
+                  onPressed: () => Navigator.of(context).pop(true),
                   child: Text('Yup')),
             ],
           );
