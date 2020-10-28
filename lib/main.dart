@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:october_2020_practise_11/screens/home_willpop.dart';
+import 'package:october_2020_practise_11/screens/screen_exporter.dart';
 import 'package:provider/provider.dart';
 
 import 'model/random_user.dart';
+import 'router/my_router.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => myUser,
       child: MaterialApp(
+        onGenerateRoute: MyRouter.generateRoute,
         debugShowCheckedModeBanner: false,
-        home: HomeWillPop(),
+        home: HomeForScreens(),
       ),
     );
   }

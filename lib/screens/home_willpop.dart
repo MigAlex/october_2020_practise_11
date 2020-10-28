@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:october_2020_practise_11/model/random_user.dart';
 import 'package:provider/provider.dart';
 
-import 'edit_screen.dart';
-
 class HomeWillPop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,10 @@ class HomeWillPop extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text('Willpop'), actions: [
-        IconButton(icon: Icon(Icons.edit), onPressed: () => editUser(context))
+        IconButton(
+          icon: Icon(Icons.edit),
+          onPressed: () => Navigator.pushNamed(context, '/editUser'),
+        ),
       ]),
       body: Center(
         child: Row(
@@ -24,10 +25,5 @@ class HomeWillPop extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void editUser(BuildContext context) {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => EditScreen()));
   }
 }
