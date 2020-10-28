@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import 'custom_widgets/custom_dropdown_button.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-  
-      home: Home(),
+      debugShowCheckedModeBanner: false,
+      home: CustomDropDownButton(),
     );
   }
 }
